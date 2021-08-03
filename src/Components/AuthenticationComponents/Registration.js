@@ -119,7 +119,7 @@ function Registration() {
             <Grid container justifyContent="flex-end">
               <Grid item>
                 <Link variant="body2" href="#">
-                  Don't have an account? Sign Up
+                  Already have an account? Sign in
                 </Link>
               </Grid>
             </Grid>

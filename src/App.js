@@ -6,9 +6,9 @@ import Resume from './Components/Resume';
 function App() {
   return (
     <div>
-      {/* <Resume /> */}
+      <Resume />
       {/* <Login /> */}
-      <Registration />
+      {/* <Registration /> */}
     </div>
   );
 }
