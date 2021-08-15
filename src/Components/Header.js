@@ -8,6 +8,7 @@ import {
 import React from "react";
 import MenuIcon from "@material-ui/icons/Menu";
 import { makeStyles } from "@material-ui/core/styles";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -24,6 +25,8 @@ const useStyles = makeStyles((theme) => ({
 function Header() {
   const classes = useStyles();
 
+  const MyLink = (props) => <Link to="/" />;
+  
   return (
     <AppBar position="static">
       <Toolbar>
@@ -38,7 +41,9 @@ function Header() {
         <Typography variant="h6" className={classes.title}>
           Resume Builder
         </Typography>
-        <Button color="inherit">Login</Button>
+        <Button color="inherit" component={Link} to="/">
+          Logout
+        </Button>
       </Toolbar>
     </AppBar>
   );

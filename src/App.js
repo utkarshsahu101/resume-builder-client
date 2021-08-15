@@ -8,8 +8,7 @@ import "typeface-roboto";
 function App() {
   return (
     <div>
-      <Resume />
-      {/* <Router basename="/resume">
+      <Router basename="/resume">
         <Switch>
           <Route exact path="/">
             <Login />
@@ -17,8 +16,11 @@ function App() {
           <Route path="/signUp">
             <Registration />
           </Route>
+          <Route path="/details">
+            <Resume />
+          </Route>
         </Switch>
-      </Router> */}
+      </Router>
     </div>
   );
 }
