@@ -9,6 +9,7 @@ import {
 } from "@material-ui/core";
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
+import { Link as RouteLink } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -113,12 +114,14 @@ function Registration() {
               fullWidth
               variant="contained"
               className={classes.signIn}
+              component={RouteLink}
+              to="/details"
             >
               Sign in
             </Button>
             <Grid container justifyContent="flex-end">
               <Grid item>
-                <Link variant="body2" href="/resume-builder-client">
+                <Link variant="body2" href="/resume">
                   Already have an account? Sign in
                 </Link>
               </Grid>
