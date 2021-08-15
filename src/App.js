@@ -8,7 +8,7 @@ import "typeface-roboto";
 function App() {
   return (
     <div>
-      <Router basename="/resume">
+      <Router basename="/resume-builder-client">
         <Switch>
           <Route exact path="/">
             <Login />

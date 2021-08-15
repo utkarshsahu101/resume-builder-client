@@ -96,7 +96,7 @@ function Login() {
                 </Link>
               </Grid>
               <Grid item>
-                <Link variant="body2" href="/resume/signUp">
+                <Link variant="body2" href="/resume-builder-client/signUp">
                   Don't have an account? Sign Up
                 </Link>
               </Grid>

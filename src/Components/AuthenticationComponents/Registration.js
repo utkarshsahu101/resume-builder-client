@@ -118,7 +118,7 @@ function Registration() {
             </Button>
             <Grid container justifyContent="flex-end">
               <Grid item>
-                <Link variant="body2" href="/resume">
+                <Link variant="body2" href="/resume-builder-client">
                   Already have an account? Sign in
                 </Link>
               </Grid>

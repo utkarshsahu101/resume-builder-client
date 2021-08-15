@@ -25,8 +25,6 @@ const useStyles = makeStyles((theme) => ({
 function Header() {
   const classes = useStyles();
 
-  const MyLink = (props) => <Link to="/" />;
-  
   return (
     <AppBar position="static">
       <Toolbar>
