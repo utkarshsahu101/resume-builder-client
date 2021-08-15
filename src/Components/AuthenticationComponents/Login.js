@@ -89,11 +89,11 @@ import {
               <Grid container justifyContent="space-between">
                 <Grid item>
                   <Link variant="body2" href="#">
-                    Forgot Password
+                    Forget Password
                   </Link>
                 </Grid>
                 <Grid item>
-                  <Link variant="body2" href="#">
+                  <Link variant="body2" href="/resume/signUp">
                     Don't have an account? Sign Up
                   </Link>
                 </Grid>

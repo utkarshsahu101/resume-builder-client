@@ -5,6 +5,42 @@ import EducationalDetails from "./EducationalDetails";
 import ExperienceDetails from "./ExperienceDetails";
 import ExtraDetails from "./ExtraDetails";
 import Header from "./Header";
+import {
+  Box,
+  Button,
+  Card,
+  CardActions,
+  CardContent,
+  CardHeader,
+  CircularProgress,
+  makeStyles,
+  Paper,
+  Typography,
+} from "@material-ui/core";
+// import CheckCircleIcon from '@material-ui/icons/CheckCircle';
+import CheckCircleOutlinedIcon from "@material-ui/icons/CheckCircleOutlined";
+import RadioButtonUncheckedOutlinedIcon from '@material-ui/icons/RadioButtonUncheckedOutlined';
+
+const useStyles = makeStyles({
+  wrapper: {
+    // margin: 25,
+  },
+  section: {
+    // width: "75%",
+    // marignRight: 10,
+  },
+  progress: {
+    // minWidth: 350,
+    // width: "25%",
+    textAlign: "center",
+  },
+  title: {
+    // fontSize: 14,
+  },
+  pos: {
+    marginBottom: 12,
+  },
+});
 
 function Resume() {
   const [step, setStep] = useState(1);
@@ -97,10 +133,83 @@ function Resume() {
     }
   };
 
+  const classes = useStyles();
+
+  const sections = [
+    "Personal Details",
+    "Educational Details",
+    "project Details",
+    "Experience Details",
+    "Extra Details",
+  ];
   return (
     <div>
       <Header />
-      {componentRendered()}
+      <Box
+        display="flex"
+        width="85%"
+        mx={"auto"}
+        mt={5}
+        className={classes.wrapper}
+      >
+        <Box width={3 / 4} mr={2} className={classes.section}>
+          {componentRendered()}
+        </Box>
+        <Box ml={2} width={1 / 4}>
+          <Card className={classes.progress} variant="outlined">
+            <CardContent>
+              <CardHeader
+                title={
+                  <Typography variant="h6" color="textSecondary" gutterBottom>
+                    PROGRESS
+                  </Typography>
+                }
+              />
+
+              <Box position="relative" display="inline-flex">
+                <CircularProgress
+                  size={100}
+                  variant="indeterminate"
+                  thickness={5}
+                />
+                <Box
+                  top={0}
+                  left={0}
+                  bottom={0}
+                  right={0}
+                  position="absolute"
+                  display="flex"
+                  alignItems="center"
+                  justifyContent="center"
+                >
+                  <Typography
+                    variant="h6"
+                    component="div"
+                    color="textSecondary"
+                  >
+                    10%
+                  </Typography>
+                </Box>
+              </Box>
+              <Box display="flex" flexDirection="column" alignContent='space-around'>
+                {sections.map((section, index) => (
+                  <Box
+                    display="flex"
+                    justifyContent="space-between"
+                    alignItems="center"
+                    key={index}
+                  >
+                    <Typography gutterBottom>{section}</Typography>
+                    {!index ? <CheckCircleOutlinedIcon color="primary" fontSize="large" /> : <RadioButtonUncheckedOutlinedIcon
+                     color="disabled" fontSize="large" />}
+                    
+                  </Box>
+                ))}
+              </Box>
+            </CardContent>
+          </Card>
+        </Box>
+      </Box>
     </div>
   );
 }

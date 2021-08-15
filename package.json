@@ -13,11 +13,14 @@
     "bootstrap": "^4.4.1",
     "cra-template": "1.0.0",
     "file-saver": "^2.0.2",
+    "firebase": "^8.9.0",
     "react": "^16.12.0",
     "react-bootstrap": "^1.0.0-beta.16",
     "react-dom": "^16.12.0",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
-    "reactstrap": "^8.2.0"
+    "reactstrap": "^8.2.0",
+    "typeface-roboto": "^1.1.13"
   },
   "proxy": "http://localhost: 4000",
   "scripts": {
