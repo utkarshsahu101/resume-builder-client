@@ -10,14 +10,14 @@ function App() {
     <div>
       <Router basename="/resume-builder-client">
         <Switch>
-          <Route exact path="/">
-            <Login />
-          </Route>
           <Route path="/signUp">
             <Registration />
           </Route>
           <Route path="/details">
             <Resume />
+          </Route>
+          <Route exact path="/">
+            <Login />
           </Route>
         </Switch>
       </Router>
